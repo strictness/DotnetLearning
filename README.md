@@ -8,8 +8,7 @@
 3. [Project Structure](#project-structure)
 4. [Installation](#installation)
 5. [Usage](#usage)
-6. [Contributing](#contributing)
-7. [License](#license)
+6. [License](#license)
 
 ### Introduction
 This repository contains solutions for the "C#: From Zero To Hero" course. It aims to help developers learn C# from the basics to advanced topics.
