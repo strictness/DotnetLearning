@@ -1,4 +1,4 @@
-﻿namespace Chapter2.Tests.Utils
+﻿namespace Chapter1.Tests.Utils
 {
     public static class ConsoleStub
     {

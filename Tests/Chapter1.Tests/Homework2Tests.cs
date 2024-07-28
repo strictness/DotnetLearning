@@ -1,8 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
-using Homework1and2;
+using Homework2;
 using Wrapper.Console;
 
-namespace Chapter2.Tests;
+namespace Chapter1.Tests;
 
 
 [ExcludeFromCodeCoverage]

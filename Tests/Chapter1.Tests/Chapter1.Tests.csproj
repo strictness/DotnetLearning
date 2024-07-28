@@ -31,7 +31,7 @@
     
     <ItemGroup>
       <ProjectReference Include="..\..\Homework3\Homework3.csproj" />
-      <ProjectReference Include="..\..\Source\Chapter1\Homework1and2\Homework1and2.csproj" />
+      <ProjectReference Include="..\..\Source\Chapter1\Homework2\Homework2.csproj" />
     </ItemGroup>
 
 </Project>

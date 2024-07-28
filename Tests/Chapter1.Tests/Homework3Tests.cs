@@ -1,8 +1,8 @@
-﻿using Chapter2.Tests.Utils;
+﻿using Chapter1.Tests.Utils;
 using FluentAssertions;
 using Homework3;
 
-namespace Chapter2.Tests
+namespace Chapter1.Tests
 {
     // Is your code working?
     public class Lesson3Tests
