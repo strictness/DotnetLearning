@@ -5,7 +5,7 @@ using Homework3;
 namespace Chapter1.Tests
 {
     // Is your code working?
-    public class Lesson3Tests
+    public class Homework3Tests
     {
         // Dummy prompt message with which input will be asked. (your specific message won't be tested)
         private const string PromptMessage = "Testing";
@@ -25,7 +25,7 @@ namespace Chapter1.Tests
         [Theory]
         [InlineData("Tom")]
         [InlineData("X")]
-        public void PromptName_PrintsMessage_And_ReturnsName(string input)
+        public void PromptString_PrintsMessage_And_ReturnsName(string input)
         {
             // Setup
             var consoleOutput = ConsoleStub.StubConsole(input);
