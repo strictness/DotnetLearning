@@ -2,13 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework1and2", "Source\Chapter1\Homework1and2\Homework1and2.csproj", "{751F5C17-654E-4ACC-9154-D9EEC7B4C7C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter1.Tests", "Tests\Chapter1.Tests\Chapter1.Tests.csproj", "{1149189C-F721-4E9A-AC62-504423E1F60E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter2.Tests", "Tests\Chapter2.Tests\Chapter2.Tests.csproj", "{1149189C-F721-4E9A-AC62-504423E1F60E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4404F10C-2E18-4F01-82E7-CA372F1B0423}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wrapper", "Source\Wrapper\Wrapper.csproj", "{66523CE4-C0D6-4FC6-A54D-7670F5D762AC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter1", "Chapter1", "{14805A5E-3770-4CBF-AECB-6E13FD368F1B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Chapter2", "Chapter2", "{14805A5E-3770-4CBF-AECB-6E13FD368F1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
