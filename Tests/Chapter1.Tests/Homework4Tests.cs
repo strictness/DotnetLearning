@@ -6,9 +6,9 @@ using Homework4;
 namespace Chapter1.Tests;
 
 // You don't have to be here for a long time.
-public class Lesson3Tests: ConsoleTests
+public class Homework4Tests: ConsoleTests
 {
-    private readonly string _promptMessage = $"Testing";
+    private readonly string _promptMessage = "Testing";
 
     [Theory]
     [InlineData(100, -100, "Height cannot be equal or less than zero, but was -100.")]
