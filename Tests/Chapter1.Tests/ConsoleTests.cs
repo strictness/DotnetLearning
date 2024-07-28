@@ -1,69 +1,68 @@
 ﻿using Chapter1.Tests.Utils;
 
-namespace Chapter1.Tests
+namespace Chapter1.Tests;
+
+public class ConsoleTests: IDisposable
 {
-    public class ConsoleTests: IDisposable
+    /// <summary>
+    /// Disposes console output file and returns its' contents.
+    /// </summary>
+    protected string ConsoleOutput
     {
-        /// <summary>
-        /// Disposes console output file and returns its' contents.
-        /// </summary>
-        protected string ConsoleOutput
+        get
         {
-            get
+            if (_consoleOutput == null)
             {
-                if (_consoleOutput == null)
-                {
-                    throw new ArgumentNullException(nameof(_consoleOutput));
-                }
-
-                _consoleOutput.Dispose();
-                var content = FakeConsole.ReadAllText(_testKey);
-
-                return content;
+                throw new ArgumentNullException(nameof(_consoleOutput));
             }
+
+            _consoleOutput.Dispose();
+            var content = FakeConsole.ReadAllText(_testKey);
+
+            return content;
         }
+    }
 
-        /// <summary>
-        /// Stubs <see cref="Console.ReadLine()"/> with the value set.
-        /// </summary>
-        protected string ConsoleInput
+    /// <summary>
+    /// Stubs <see cref="Console.ReadLine()"/> with the value set.
+    /// </summary>
+    protected string ConsoleInput
+    {
+        set
         {
-            set
-            {
-                var input = new StringReader(value);
-                Console.SetIn(input);
-            }
+            var input = new StringReader(value);
+            Console.SetIn(input);
         }
+    }
 
-        /// <summary>
-        /// Used for identifying test file for the current test case console redirected output.
-        /// </summary>
-        private string _testKey;
-        private StreamWriter _consoleOutput;
+    /// <summary>
+    /// Used for identifying test file for the current test case console redirected output.
+    /// </summary>
+    private string _testKey;
+    private StreamWriter _consoleOutput;
 
-        public ConsoleTests()
+    public ConsoleTests()
+    {
+        RedirectConsoleToFile();
+    }
+
+    /// <summary>
+    /// Fakes <see cref="Console.WriteLine()"/>.
+    /// Console output goes to file.
+    /// </summary>
+    private void RedirectConsoleToFile()
+    {
+        _testKey = Guid.NewGuid().ToString();
+        _consoleOutput = new StreamWriter($"{_testKey}.{FakeConsole.TestFileExtension}");
+        Console.SetOut(_consoleOutput);
+    }
+
+    public void Dispose()
+    {
+        if (_testKey != null)
         {
-            RedirectConsoleToFile();
-        }
-
-        /// <summary>
-        /// Fakes <see cref="Console.WriteLine()"/>.
-        /// Console output goes to file.
-        /// </summary>
-        private void RedirectConsoleToFile()
-        {
-            _testKey = Guid.NewGuid().ToString();
-            _consoleOutput = new StreamWriter($"{_testKey}.{FakeConsole.TestFileExtension}");
-            Console.SetOut(_consoleOutput);
-        }
-
-        public void Dispose()
-        {
-            if (_testKey != null)
-            {
-                _consoleOutput.Dispose();
-                FakeConsole.Cleanup(_testKey);
-            }
+            _consoleOutput.Dispose();
+            FakeConsole.Cleanup(_testKey);
         }
     }
 }
