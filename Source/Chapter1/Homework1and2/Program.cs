@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Wrapper.Console;
 
-namespace Chapter1;
+namespace Homework1and2;
 
 public static class Program
 {

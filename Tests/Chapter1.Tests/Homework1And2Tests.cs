@@ -1,12 +1,12 @@
 using System.Diagnostics.CodeAnalysis;
-using Moq;
+using Homework1and2;
 using Wrapper.Console;
 
 namespace Chapter1.Tests;
 
 
 [ExcludeFromCodeCoverage]
-public class ChapterTests
+public class Homework1And2Tests
 {
     private readonly Mock<IConsole> _mockConsole = SetupMockConsole();
 

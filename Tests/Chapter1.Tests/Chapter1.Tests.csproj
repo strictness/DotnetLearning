@@ -25,10 +25,11 @@
 
     <ItemGroup>
         <Using Include="Xunit"/>
+        <Using Include="Moq"/>
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\..\Source\Chapter1\Chapter1.csproj" />
+      <ProjectReference Include="..\..\Source\Chapter1\Homework1and2\Homework1and2.csproj" />
     </ItemGroup>
 
 </Project>
