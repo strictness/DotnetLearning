@@ -8,7 +8,7 @@ using static Chapter1.Tests.Input.Insert.InsertElementExpectations;
 namespace Chapter1.Tests;
 
     // You don't have to be here for a long time.
-    public class Lesson5Tests
+    public class Homework5Tests
     {
         [Theory]
         [ClassData(typeof(ArraySortExpectations))]

@@ -7,9 +7,12 @@ public static class ArrayOperations
     /// If array empty or null- don't do anything.
     /// </summary>
     /// <param name="array">Input array in a random order.</param>
-    public static void Sort(int[] array)
+    public static void Sort(int[]? array)
     {
-        // ToDo: implement.
+        if (array?.Length > 0)
+        {
+            Array.Sort(array);
+        }
     }
 
     /// <summary>
@@ -17,9 +20,12 @@ public static class ArrayOperations
     /// If array empty or null- don't do anything.
     /// </summary>
     /// <param name="array">Input array in a random order.</param>
-    public static void Reverse(int[] array)
+    public static void Reverse(int[]? array)
     {
-        // ToDo: implement.
+        if (array?.Length > 0)
+        {
+            Array.Reverse(array);
+        }
     }
 
     /// <summary>
@@ -27,20 +33,18 @@ public static class ArrayOperations
     /// </summary>
     /// <param name="array">Input array.</param>
     /// <returns>A new array with the last element removed. If an array is empty or null, returns input array.</returns>
-    public static int[] RemoveLast(int[] array)
+    public static int[]? RemoveLast(int[]? array)
     {
-        // ToDo: implement.
-        return array;
+        return array?.Length > 0 ? array[..^1] : array;
     }
 
     /// <summary>
     /// Remove first element in array.
     /// </summary>
     /// <returns>A new array with the first element removed. If an array is empty or null, returns input array.</returns>
-    public static int[] RemoveFirst(int[] array)
+    public static int[]? RemoveFirst(int[]? array)
     {
-        // ToDo: implement.
-        return array;
+        return array?.Length > 0 ? array[1..] : array;
     }
 
     /// <summary>
@@ -49,10 +53,11 @@ public static class ArrayOperations
     /// <param name="array">Input array.</param>
     /// <param name="index">Index at which array element should be removed.</param>
     /// <returns>A new array with element removed at a given index. If an array is empty or null, returns input array.</returns>
-    public static int[] RemoveAt(int[] array, int index)
+    public static int[]? RemoveAt(int[]? array, int index)
     {
-        // ToDo: implement.
-        return array;
+        return array?.Length > 0 && index >= 0 && index < array.Length
+            ? array.Where((_, i) => i != index).ToArray()
+            : array;
     }
 
     /// <summary>
@@ -61,10 +66,11 @@ public static class ArrayOperations
     /// <param name="array">Input array.</param>
     /// <param name="number">Number to be added.</param>
     /// <returns>A new array with element added at a given index. If an array is empty or null, returns new array with number in it.</returns>
-    public static int[] InsertFirst(int[] array, int number)
+    public static int[] InsertFirst(int[]? array, int number)
     {
-        // ToDo: implement.
-        return array;
+        return array?.Length > 0
+            ? new[] { number }.Concat(array).ToArray()
+            : [number];
     }
 
     /// <summary>
@@ -73,10 +79,11 @@ public static class ArrayOperations
     /// <param name="array">Input array.</param>
     /// <param name="number">Number to be added.</param>
     /// <returns>A new array with element added in the end of array. If an array is empty or null, returns new array with number in it.</returns>
-    public static int[] InsertLast(int[] array, int number)
+    public static int[] InsertLast(int[]? array, int number)
     {
-        // ToDo: implement.
-        return array;
+        return array?.Length > 0
+            ? array.Concat(new[] { number }).ToArray()
+            : [number];
     }
 
     /// <summary>
@@ -86,9 +93,19 @@ public static class ArrayOperations
     /// <param name="number">Number to be added.</param>
     /// <param name="index">Index at which array element should be added.</param>
     /// <returns>A new array with element inserted at a given index. If an array is empty or null, returns new array with number in it.</returns>
-    public static int[] InsertAt(int[] array, int number, int index)
+    public static int[] InsertAt(int[]? array, int number, int index)
     {
-        // ToDo: implement.
-        return array;
+        if (array != null && (index < 0 || index > array.Length))
+        {
+            return [];
+        }
+        if (array == null || array.Length == 0)
+        {
+            return [number];
+        }
+
+        var list = array.ToList();
+        list.Insert(index, number);
+        return list.ToArray();
     }
 }
