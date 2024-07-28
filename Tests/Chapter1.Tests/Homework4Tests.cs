@@ -1,11 +1,12 @@
-﻿using Chapter1.Tests.Utils;
+﻿using System.Diagnostics.CodeAnalysis;
+using Chapter1.Tests.Utils;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using Homework4;
 
 namespace Chapter1.Tests;
 
-// You don't have to be here for a long time.
+[ExcludeFromCodeCoverage]
 public class Homework4Tests: ConsoleTests
 {
     private readonly string _promptMessage = "Testing";

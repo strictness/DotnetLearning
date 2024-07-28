@@ -1,7 +1,9 @@
-﻿using Chapter1.Tests.Utils;
+﻿using System.Diagnostics.CodeAnalysis;
+using Chapter1.Tests.Utils;
 
 namespace Chapter1.Tests;
 
+[ExcludeFromCodeCoverage]
 public class ConsoleTests: IDisposable
 {
     /// <summary>

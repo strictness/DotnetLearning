@@ -1,5 +1,8 @@
-﻿namespace Chapter1.Tests.Utils;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace Chapter1.Tests.Utils;
+
+[ExcludeFromCodeCoverage]
 public static class FakeConsole
 {
     public const string TestFileExtension = "consoleStub";

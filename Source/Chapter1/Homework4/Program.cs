@@ -1,7 +1,10 @@
-﻿namespace Homework4;
+﻿using System.Diagnostics.CodeAnalysis;
+
+namespace Homework4;
 
 public class Program
 {
+    [ExcludeFromCodeCoverage]
     public static void Main()
     {
         Demo();

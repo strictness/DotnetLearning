@@ -1,10 +1,11 @@
-﻿using Chapter1.Tests.Utils;
+﻿using System.Diagnostics.CodeAnalysis;
+using Chapter1.Tests.Utils;
 using FluentAssertions;
 using Homework3;
 
 namespace Chapter1.Tests;
 
-// Is your code working?
+[ExcludeFromCodeCoverage]
 public class Homework3Tests
 {
     // Dummy prompt message with which input will be asked. (your specific message won't be tested)
