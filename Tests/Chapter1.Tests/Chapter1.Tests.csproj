@@ -33,7 +33,8 @@
       <ProjectReference Include="..\..\Source\Chapter1\Homework2\Homework2.csproj" />
       <ProjectReference Include="..\..\Source\Chapter1\Homework3\Homework3.csproj" />
       <ProjectReference Include="..\..\Source\Chapter1\Homework4\Homework4.csproj" />
-      <ProjectReference Include="..\..\Source\Chapter1\Homework5\Homework5\Homework5.csproj" />
+      <ProjectReference Include="..\..\Source\Chapter1\Homework5\Homework5.csproj" />
+      <ProjectReference Include="..\..\Source\Chapter1\Homework7\Homework7.csproj" />
     </ItemGroup>
 
 </Project>
