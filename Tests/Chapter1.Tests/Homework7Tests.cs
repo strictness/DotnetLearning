@@ -5,7 +5,7 @@ using Homework7;
 namespace Chapter1.Tests
 {
     // You don't have to be here for a long time.
-    public class Lesson7Tests
+    public class Homework7Tests
     {
         [Theory]
         [ClassData(typeof(TableMessageInput))]
